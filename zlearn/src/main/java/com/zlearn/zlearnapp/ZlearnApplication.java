@@ -1,4 +1,4 @@
-package com.example.zlearnapp;
+package com.zlearn.zlearnapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
