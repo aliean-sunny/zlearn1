@@ -7,7 +7,7 @@
 	<groupId>com.zlearn.zlearnapp</groupId>
 	<artifactId>zlearn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>zlearn</name>
 	<description>A Learning App</description>
@@ -34,21 +34,43 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.tomcat.embed</groupId> <artifactId>tomcat-embed-jasper</artifactId> 
+			<scope>provided</scope> </dependency> -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.jdt.core.compiler/ecj -->
+		<dependency>
+			<groupId>org.eclipse.jdt.core.compiler</groupId>
+			<artifactId>ecj</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-core</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
 		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -56,6 +78,13 @@
 			<version>2.3.1</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
 		<dependency>
