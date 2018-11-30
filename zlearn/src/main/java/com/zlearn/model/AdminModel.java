@@ -17,7 +17,7 @@ private Integer admin_id;
 
 private String username;
 private String email_id;
-private Integer mobile_no;
+private Long mobile_no;
 private String pass;
 private Integer admin_status;
 private Date created_at;
@@ -43,10 +43,10 @@ public String getEmail_id() {
 public void setEmail_id(String email_id) {
 	this.email_id = email_id;
 }
-public Integer getMobile_no() {
+public Long getMobile_no() {
 	return mobile_no;
 }
-public void setMobile_no(Integer mobile_no) {
+public void setMobile_no(Long mobile_no) {
 	this.mobile_no = mobile_no;
 }
 public String getPass() {
