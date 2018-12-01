@@ -29,7 +29,8 @@ public class HomepageController {
 	@Autowired
 	LoginHelper loginHelper;
 	
-	
+
+/******************************************************************************/
 /*homePage() is specially defined to map home page or welcome page */
 /*homePage() starting here*/
 	@GetMapping("/")
@@ -47,14 +48,12 @@ public class HomepageController {
 		return tasks;
 	}
 	
-	
+/***********************************************************************************/	
 
 	/*GET Method is given here for just testing over Rest Services. it will get changed with PPOST method once view resolver will get added  */
-	@GetMapping("/login")
+	@GetMapping("/adminlogin")
 	public String LoginController(ModelMap model ,@RequestParam String email, @RequestParam String pass) {
-		
 		boolean status=loginHelper.loginAuthentication(email,pass);
-		
 		if(status==false) {
 			model.put("errorMessage", "Invalid Credentials");
             return "login"; 
@@ -62,7 +61,39 @@ public class HomepageController {
 			model.put("name", email);
 	        model.put("password", pass);
 
-	        return "welcome";
+	        return "admindashboard.jsp";
 		}
 	}
+	
+
+/***********************************************************************************/
+	@GetMapping("/campuslogin")
+	public String campusLoginController() {
+		
+	/*	Campus login logic will go here*/
+		
+		return "campusdashboard.jsp";
+		
+	}
+	
+	
+/*************************************************************************************/
+	@GetMapping("/trainerlogin")
+	public String trainerLogin() {
+		
+		/*Trainer login logic will go here*/
+		
+		return "trainerdashboard.jsp";
+	}
+	
+/*************************************************************************************/
+	public String studentLogin() {
+		
+		/*Student login logic will go here*/
+		
+		return "studentdashboard.jsp";
+	}
+
+	
+/*************************************************************************************/
 }
