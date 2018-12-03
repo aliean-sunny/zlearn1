@@ -23,8 +23,7 @@ public class DashboardController {
 	
 	
 	
-	@Autowired
-	CampusService campusService;
+	
 	
 	
 	
@@ -67,14 +66,7 @@ public class DashboardController {
 
 	
 	
-	@GetMapping(value="/getcampus", headers="Accept=application/json")
-	public List<CampusModel> campusDashboard() {
 	
-			List<CampusModel> tasks=campusService.allCampus();
-			return tasks;
-	
-		
-	}
 	
 
 	public String trainerDashboard() {

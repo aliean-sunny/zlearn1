@@ -13,4 +13,5 @@ import com.zlearn.model.CampusModel;
 public interface CampusService {
 
 	public List<CampusModel> allCampus();
+	public void saveCampusModel(CampusModel campusModel);
 }

@@ -33,16 +33,16 @@ public class HomepageController {
 /******************************************************************************/
 /*homePage() is specially defined to map home page or welcome page */
 /*homePage() starting here*/
-	@GetMapping("/")
+	/*@GetMapping("/")
 	public String homePage() {
 		return  "home";
-	}
+	}*/
 /*homePage() ends here*/	
 	
 /********************************************************************************/	
 	
 /*showAdmin() method is to get all admin user with complete attributes */
-	@GetMapping(value="/get", headers="Accept=application/json")
+	@GetMapping(value="/getAllAdmin", headers="Accept=application/json")
 	public List<AdminModel> showAdmin() {
 		List<AdminModel> tasks=adminService.allUser();
 		return tasks;

@@ -27,4 +27,11 @@ public class CampusServiceImpl implements CampusService{
 		return (List<CampusModel>) campusRepo.findAll();
 	}
 
+	@Override
+	public void saveCampusModel(CampusModel campusModel) {
+		// TODO Auto-generated method stub
+		campusRepo.save(campusModel);
+		
+	}
+
 }
